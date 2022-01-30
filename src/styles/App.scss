@@ -1,0 +1,144 @@
+#App{
+  display: flex;
+  flex-direction: row;
+
+  aside{
+    flex: 1;
+    background: #3B64B9;
+    height:100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    color: #fff;
+  }
+
+  main {
+    flex:2;
+    background-color: #fff;
+  }
+}
+
+.img-poke {
+  width: 20em;
+  height: 20rem;
+
+  margin-bottom: 7vh;
+
+  display: flex;
+  align-items: flex-end;
+  
+  img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+#detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100vh;
+
+  text-align: center;
+
+  #background-detail {
+    flex: 1;
+    max-height: 50vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  #poke-stats {
+    flex: 1;
+    max-height: 50vh;
+    
+    display: flex; 
+
+    align-items: flex-start;
+    justify-content: center;
+
+    p {
+      color: #fff;
+      text-shadow: 2px 2px 4px #2229;
+      position: relative;
+      top: -12vh;
+      font-size: 36px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.border {
+  border: 1px solid #f00;
+}
+
+.navbar {
+  background-color: #FFCC03;
+  color: #fff;
+  padding: 0.5em;
+
+  .brand {
+    img { 
+      width: 100px;
+    }
+  }
+}
+
+#catalogue{
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-top: 3vh;
+  padding-right: 3vh;
+  padding-bottom: 3vh;
+
+  .book-page {
+    width: 100%;
+    height: 81vh;
+
+    background-color: rgb(181, 174, 87);
+    padding: 2vh;
+
+    box-shadow: 10px 10px 12px #0007;
+
+    .book-overflow{
+      background-color: #0002;
+      width: 100%;
+      height: 100%;
+
+      .book-content {
+        display: flex;
+        flex-flow: row wrap;
+        overflow-y: auto;
+        overflow-x: hidden;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+      }
+
+      .book-content::-webkit-scrollbar {
+        width: 12px;               /* width of the entire scrollbar */
+      }
+
+      .book-content::-webkit-scrollbar-track {
+        background: #2229;        /* color of the tracking area */
+      }
+
+      .book-content::-webkit-scrollbar-thumb {
+        background-color: #2229;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        // border: 3px solid orange;  /* creates padding around scroll thumb */
+      }
+    }
+  }
+}

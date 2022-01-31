@@ -10,7 +10,7 @@ function ThumbnailPokemon(props) {
 
     useEffect(() => {
         console.log('Thumbnail:' + props.urlPokemon)
-        api .get(props.urlPokemon)
+        api.get(props.urlPokemon)
             .then(result => {
                 logo = setLogo(result.data.sprites.front_default);
             })
@@ -22,7 +22,7 @@ function ThumbnailPokemon(props) {
     
     return (
         <div className="thumbnail">
-            <div className="thumb-border" style={{ backgroundColor: 'white'}} onMouseDown={log}>
+            <div className="thumb-border" style={{ backgroundColor: 'white'}} onMouseEnter={log}>
                 <div className="thumb-image">
                     <img src={logo} alt="" />
                 </div>

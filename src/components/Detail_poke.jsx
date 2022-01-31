@@ -8,7 +8,7 @@ export default function Detail_poke(props) {
 
   let [logo, setLogo] = useState(loading)
   let [nome, setNome] = useState('carregando')
-  let [link, setLink] = useState(props.poke.replace('https://pokeapi.co/api/v2/', ''))
+  let link = props.poke.replace('https://pokeapi.co/api/v2/', '')
 
   // props.poke.replace('https://pokeapi.co/api/v2/', '');
   
@@ -21,7 +21,7 @@ export default function Detail_poke(props) {
             console.log(result);
           })
     }
-  }, []);
+  });
 
   return (
     <div id="detail">
